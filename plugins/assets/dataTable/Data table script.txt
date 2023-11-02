@@ -1,0 +1,17 @@
+ $(document).ready(function () {
+                                $(".dynamic-table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable({
+                                    dom: 'Bfrtlip',
+                                    buttons: [
+                                        'copy', 'csv', 'excel', 'pdf', 'print'
+                                    ],
+
+                                    "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+                                        //debugger;
+                                        var index = iDisplayIndexFull + 1;
+                                        $("td:first", nRow).html(index);
+                                        return nRow;
+                                    }
+                                });
+
+
+                            });

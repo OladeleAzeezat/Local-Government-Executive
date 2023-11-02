@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+<!DOCTYPE html>
+
+<html >
+<head runat="server">
+    <title>FON</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet" />
+    <link href="assets/css/themes/lite-purple.min.css" rel="stylesheet" />
+    <link href="assets/css/plugins/perfect-scrollbar.min.css" rel="stylesheet" />
+    <link href="assets/alertify/alertify.css" rel="stylesheet" />
+    <link href="assets/alertify/bootstrap.css" rel="stylesheet" />
+    <script src="assets/js/alertify.js"></script>
+    <script type="text/javascript" src="assets/assets/dataTable/jquery-3.5.1.js"></script>
+    <link rel='shortcut icon' type='image/x-icon' href="assets/images/mini.jpg"/>
+
+    <asp:ContentPlaceHolder runat="server" ID="head"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="app-admin-wrap layout-sidebar-large">
+            <div class="main-header">
+                <div class="logo">
+                    <img src="assets/images/Logo.jpg" alt="" />
+                </div>
+                <div class="menu-toggle">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="align-items-center">
+                    <div>
+                        <h4 class="text-uppercase  ">FON PARTY MANAGEMENT SYSTEM</h4>
+                    </div>
+                </div>
+                <div style="margin: auto"></div>
+                <div class="header-part-right">
+                    <!-- Full screen toggle -->
+                    <i class="i-Full-Screen header-icon d-none d-sm-inline-block" data-fullscreen=" "></i>
+                    <!-- Grid menu Dropdown -->
+
+
+                    <!-- User avatar dropdown -->
+                    <div class="dropdown">
+                        
+                    </div>
+
+                </div>
+            </div>
+            <div class="side-content-wrap">
+                <div class="sidebar-left open rtl-ps-none" data-perfect-scrollbar="" data-suppress-scroll-x="true">
+                    <ul class="navigation-left">
+                        <li class="nav-item">
+                            <a class="nav-item-hold" href="Dashboard.aspx"><i class="nav-icon i-Bar-Chart"></i><span class="nav-text">Dashboard</span></a>
+                            <div class="triangle"></div>
+                        </li>
+                        <li class="nav-item" data-item="accounts">
+                            <a class="nav-item-hold" href="#"><i class="nav-icon i-Library"></i><span class="nav-text">Accounts</span></a>
+                            <div class="triangle"></div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-item-hold" href="Default.aspx"><i class="nav-icon i-Bar-Chart"></i><span class="nav-text">Logout</span></a>
+                            <div class="triangle"></div>
+                        </li>
+
+
+                    </ul>
+                </div>
+              <%--  <div class="sidebar-left-secondary rtl-ps-none" data-perfect-scrollbar="" data-suppress-scroll-x="true">
+                    <!-- Submenu Dashboards-->
+
+                    <ul class="childNav" data-parent="accounts">
+                        <li class="nav-item"><a href="LgSub.aspx"><i class="nav-icon  i-Key-Lock"></i><span class="item-name">Local Government</span></a></li>
+                        <li class="nav-item"><a href="WardSub.aspx"><i class="nav-icon i-Key-Lock"></i><span class="item-name">Ward</span></a></li>
+                        <li class="nav-item"><a href="PuSub.aspx"><i class="nav-icon i-Add-User"></i><span class="item-name">Polling Units</span></a></li>
+                        <li class="nav-item"><a href="CanSub.aspx"><i class="nav-icon i-Password"></i><span class="item-name">Canvassers</span></a></li>
+                    </ul>
+
+                </div>--%>
+                <div class="sidebar-overlay"></div>
+            </div>
+            <!-- =============== Left side End ================-->
+            <div class="main-content-wrap sidenav-open d-flex flex-column">
+                <!-- ============ Body content start ============= -->
+                <div class="main-content">
+                    <asp:ContentPlaceHolder runat="server" ID="content">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+                <!-- Footer Start -->
+                <div class="flex-grow-1"></div>
+                <div class="app-footer">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <p><strong>Oyo State</strong></p>
+                            <p>
+                                Party System Records
+                            <sunt></sunt>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="footer-bottom border-top pt-3 d-flex flex-column flex-sm-row align-items-center">
+
+                        <span class="flex-grow-1"></span>
+                        <div class="d-flex align-items-center">
+                            <img class="logo" src="assets/images/Logo.jpg" alt="">
+                            <div>
+                                <p class="m-0">&copy; 2023 FON</p>
+                                <p class="m-0">All rights reserved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- fotter end -->
+            </div>
+        </div>
+        <script src="assets/js/plugins/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
+        <script src="assets/js/scripts/script.min.js"></script>
+        <script src="assets/js/scripts/sidebar.large.script.min.js"></script>       
+        <asp:ContentPlaceHolder runat="server" ID="bottom"></asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
